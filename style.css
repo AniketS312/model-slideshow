@@ -1,0 +1,112 @@
+html {
+    box-sizing: border-box;
+    
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.translate-div {
+    transform: translateY(0);
+    transition: .8s ease;
+}
+
+.section {
+    display: flex;
+}
+
+/* Lef Side */
+.section .image-div {
+    width: 50vw;
+    height: 100vh;
+}
+
+.section .image-div img {
+    height: auto;
+    max-width: 100%;
+}
+
+.section .image-div img {
+    width: auto;
+    height: 100%;  
+}
+
+
+/* right side */
+.section .info-div {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5%;
+}
+
+/* font & button */
+
+h2 {
+    font-size: 4rem;
+    margin-bottom: .5rem;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+h4 {
+font-size: 1.2rem;
+margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 2rem;
+}
+
+button {
+    background-color: transparent;
+    border: black 3px solid;
+    padding: .8rem 0;
+    width: 30%;
+    cursor: pointer;
+    transition: all .3s;
+    text-transform: uppercase;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* Slide BUttons */
+
+.slide-info {
+    position: fixed; 
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    color: white;
+    width: 5vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.slide-info .button-next,
+.slide-info .button-prev {
+    cursor: pointer;
+}
+
