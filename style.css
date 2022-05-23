@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400&family=Lora:wght@600&display=swap');
+
+/* COMMON CSS */
 html {
     box-sizing: border-box;
     
@@ -16,37 +19,53 @@ body {
     height: 100vh;
     overflow: hidden;
     position: relative;
+    font-family: 'Barlow', sans-serif;
 }
 
+h3,
+h4 {
+    font-size: 400;
+}
+
+p,
+button {
+    font-family: 'Lara', sans-serif;
+    font-size: 300;
+}
+
+/* MAIN CSS */
 .translate-div {
     transform: translateY(0);
-    transition: .8s ease;
+    transition: .5s ease;
+    overflow: hidden;
 }
 
 .section {
     display: flex;
+    height: 100vh;
 }
 
 /* Lef Side */
 .section .image-div {
     width: 50vw;
-    height: 100vh;
+    height: 100%;
+    position: relative;
 }
 
-.section .image-div img {
-    height: auto;
-    max-width: 100%;
+
+
+.section .image-div .main-img {
+    width: 100%;
+    height: 100vh;  
+    object-fit: cover;
 }
 
-.section .image-div img {
-    width: auto;
-    height: 100%;  
-}
+
 
 
 /* right side */
 .section .info-div {
-    width: 50%;
+    width: 50vw;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -69,6 +88,21 @@ h3 {
 h4 {
 font-size: 1.2rem;
 margin-bottom: 1rem;
+}
+
+h5 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: .5rem;
+}
+
+h6 {
+    color: white;
+    font-size: 1.2rem;
+}
+
+h6 span {
+    color: silver;
 }
 
 p {
@@ -108,5 +142,40 @@ button:hover {
 .slide-info .button-next,
 .slide-info .button-prev {
     cursor: pointer;
+}
+
+.slide-info .slide-info-number hr {
+    width: 40%;
+    margin: 5px auto;
+}
+
+
+/* Active State */
+
+.section .image-div .model-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba( 110, 110, 110, 0.6 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 9.5px );
+    -webkit-backdrop-filter: blur( 9.5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    left: -100%;
+    transition: left .5s;
+}
+
+.model-description .secondary-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
 }
 
